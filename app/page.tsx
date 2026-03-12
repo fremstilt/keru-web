@@ -33,8 +33,11 @@ export default function Home() {
       <section
         className="relative flex min-h-screen flex-col items-center justify-center px-6 py-20"
         style={{
-          background:
-            "radial-gradient(ellipse 80% 60% at 50% 40%, #E8E5DF 0%, var(--color-birch-bark) 55%, #EAF0EF 100%)",
+          background: [
+            "radial-gradient(ellipse 120% 70% at 15% 10%, #A8BEA7 0%, transparent 55%)",
+            "radial-gradient(ellipse 90% 60% at 85% 80%, #C8DBD8 0%, transparent 50%)",
+            "radial-gradient(ellipse 100% 80% at 50% 50%, #E8E5DF 0%, var(--color-birch-bark) 65%)",
+          ].join(", "),
         }}
         aria-label="Hero"
       >
@@ -46,6 +49,7 @@ export default function Home() {
             width={120}
             height={29}
             priority
+            style={{ filter: "invert(46%) sepia(20%) saturate(600%) hue-rotate(80deg) brightness(85%) contrast(90%)" }}
           />
         </header>
 
