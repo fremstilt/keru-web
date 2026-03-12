@@ -1,127 +1,101 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
+/* ─── Brand color palette ─── */
 :root {
   /* ── CORE ── */
-  --color-background:  #F4F1EC;
-  --color-surface:     #E8E5DF;
-  --color-border:      #CFC9BF;
-  --color-muted:       #9A9188;
-  --color-foreground:  #6B5E52;
-  --color-emphasis:    #2E2923;
+  --color-birch-bark:    #F4F1EC;
+  --color-mist:          #CFC9BF;
+  --color-stone:         #9A9188;
+  --color-driftwood:     #6B5E52;
+  --color-forest-frame:  #2E2923;
+  --color-forest-green:  #5C7E5A;
+  --color-still-water:   #4D837E;
 
-  /* ── PRIMARY (warm brown-grey) ── */
+  /* ── FULL SCALES ── */
   --primary-50:   #F0EDE7;
   --primary-100:  #DDD7CE;
   --primary-200:  #BFBAB0;
   --primary-300:  #9A9188;
   --primary-400:  #7A7069;
-  --primary-500:  #6B5E52;  /* main */
+  --primary-500:  #6B5E52;
   --primary-600:  #574D43;
   --primary-700:  #433C34;
   --primary-800:  #2E2923;
   --primary-900:  #1A1713;
 
-  /* ── SECONDARY (skoggrønn) ── */
-  --secondary-50:   #EBF0EB;
-  --secondary-100:  #CDD9CC;
-  --secondary-200:  #A8BEA7;
-  --secondary-300:  #7D9E7B;
-  --secondary-400:  #5C7E5A;  /* main */
-  --secondary-500:  #446244;
-  --secondary-600:  #324A32;
-  --secondary-700:  #223523;
-  --secondary-800:  #142016;
-  --secondary-900:  #0A110A;
+  --secondary-50:  #EBF0EB;
+  --secondary-100: #CDD9CC;
+  --secondary-200: #A8BEA7;
+  --secondary-300: #7D9E7B;
+  --secondary-400: #5C7E5A;
+  --secondary-500: #446244;
+  --secondary-600: #324A32;
+  --secondary-700: #223523;
+  --secondary-800: #142016;
+  --secondary-900: #0A110A;
 
-  /* ── ACCENT (blågrønn) ── */
-  --accent-50:   #EAF0EF;
-  --accent-100:  #C8DBD8;
-  --accent-200:  #A0C0BC;
-  --accent-300:  #72A19C;
-  --accent-400:  #4D837E;  /* main */
-  --accent-500:  #3A6B67;
-  --accent-600:  #2A5350;
-  --accent-700:  #1C3C3A;
-  --accent-800:  #102826;
-  --accent-900:  #081615;
+  --accent-50:  #EAF0EF;
+  --accent-100: #C8DBD8;
+  --accent-200: #A0C0BC;
+  --accent-300: #72A19C;
+  --accent-400: #4D837E;
+  --accent-500: #3A6B67;
+  --accent-600: #2A5350;
+  --accent-700: #1C3C3A;
+  --accent-800: #102826;
+  --accent-900: #081615;
 
-  /* ── NEUTRAL ── */
-  --neutral-0:    #FFFFFF;
-  --neutral-50:   #F9F7F5;
-  --neutral-100:  #F4F1EC;
-  --neutral-200:  #E8E5DF;
-  --neutral-300:  #D4D0C8;
-  --neutral-400:  #B8B3AA;
-  --neutral-500:  #9A9188;
-  --neutral-600:  #7A7069;
-  --neutral-700:  #5A5249;
-  --neutral-800:  #3C352E;
-  --neutral-900:  #1F1A15;
-  --neutral-950:  #0F0D0A;
+  --neutral-0:   #FFFFFF;
+  --neutral-50:  #F9F7F5;
+  --neutral-100: #F4F1EC;
+  --neutral-200: #E8E5DF;
+  --neutral-300: #D4D0C8;
+  --neutral-400: #B8B3AA;
+  --neutral-500: #9A9188;
+  --neutral-600: #7A7069;
+  --neutral-700: #5A5249;
+  --neutral-800: #3C352E;
+  --neutral-900: #1F1A15;
+  --neutral-950: #0F0D0A;
+}
 
-  /* ── SEMANTICS ── */
-  --success:        #4A7C5F;
-  --success-light:  #D4E9DC;
-  --success-dark:   #2C5040;
+/* ─── Tailwind v4 theme tokens ─── */
+@theme inline {
+  --color-birch-bark:   var(--color-birch-bark);
+  --color-mist:         var(--color-mist);
+  --color-stone:        var(--color-stone);
+  --color-driftwood:    var(--color-driftwood);
+  --color-forest-frame: var(--color-forest-frame);
+  --color-forest-green: var(--color-forest-green);
+  --color-still-water:  var(--color-still-water);
 
-  --warning:        #8C6B2F;
-  --warning-light:  #F0E2C4;
-  --warning-dark:   #5C430F;
+  --font-display: var(--font-dm-serif);
+  --font-sans:    var(--font-dm-sans);
+}
 
-  --error:          #8C3A3A;
-  --error-light:    #F0D0D0;
-  --error-dark:     #5C1E1E;
+/* ─── Base ─── */
+html {
+  background-color: var(--color-birch-bark);
+  color: var(--color-driftwood);
+}
 
-  --info:           #3A6B8C;
-  --info-light:     #C4DCF0;
-  --info-dark:      #1E4A5C;
+body {
+  background-color: var(--color-birch-bark);
+  color: var(--color-driftwood);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
 
-  /* ── TOKENS ── */
-  --bg-base:      #F9F7F5;
-  --bg-subtle:    #F4F1EC;
-  --bg-muted:     #E8E5DF;
-  --bg-emphasis:  #3C352E;
-  --bg-inverted:  #0F0D0A;
-
-  --text-primary:   #1F1A15;
-  --text-secondary: #5A5249;
-  --text-muted:     #9A9188;
-  --text-disabled:  #B8B3AA;
-  --text-inverted:  #F9F7F5;
-  --text-link:      #4D837E;
-  --text-link-hover:#72A19C;
-
-  --border-subtle:  #E8E5DF;
-  --border-default: #D4D0C8;
-  --border-strong:  #9A9188;
-  --border-focus:   #4D837E;
-
-  --shadow-sm: 0 1px 3px rgba(30,23,15,0.08);
-  --shadow-md: 0 4px 12px rgba(30,23,15,0.12);
-  --shadow-lg: 0 12px 32px rgba(30,23,15,0.16);
+/* ─── Paper grain texture overlay ─── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.032;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 250px 250px;
 }
