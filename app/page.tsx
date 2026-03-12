@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Sunrise, Moon, Leaf } from "lucide-react";
 
 const APP_STORE_URL = "#";
@@ -275,12 +276,21 @@ export default function Home() {
           height={17}
           style={{ filter: "brightness(0) invert(1)", opacity: 0.45 }}
         />
-        <p
-          className="text-xs"
-          style={{ color: "rgba(244,241,236,0.4)" }}
-        >
-          &copy; {new Date().getFullYear()} Keru. All rights reserved.
-        </p>
+        <div className="flex items-center gap-5">
+          <Link
+            href="/privacy"
+            className="text-xs"
+            style={{ color: "rgba(244,241,236,0.4)" }}
+          >
+            Privacy Policy
+          </Link>
+          <span className="text-xs" style={{ color: "rgba(244,241,236,0.2)" }}>
+            &middot;
+          </span>
+          <p className="text-xs" style={{ color: "rgba(244,241,236,0.4)" }}>
+            &copy; {new Date().getFullYear()} Keru. All rights reserved.
+          </p>
+        </div>
       </footer>
     </>
   );
