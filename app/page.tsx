@@ -287,6 +287,16 @@ export default function Home() {
           <span className="text-xs" style={{ color: "rgba(244,241,236,0.2)" }}>
             &middot;
           </span>
+          <Link
+            href="/support"
+            className="text-xs"
+            style={{ color: "rgba(244,241,236,0.4)" }}
+          >
+            Support
+          </Link>
+          <span className="text-xs" style={{ color: "rgba(244,241,236,0.2)" }}>
+            &middot;
+          </span>
           <p className="text-xs" style={{ color: "rgba(244,241,236,0.4)" }}>
             &copy; {new Date().getFullYear()} Keru. All rights reserved.
           </p>
