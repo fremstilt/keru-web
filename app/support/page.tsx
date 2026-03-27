@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Support — Keru",
@@ -172,30 +173,28 @@ export default function SupportPage() {
           {/* Contact */}
           <section
             className="rounded-2xl px-8 py-8"
-            style={{ backgroundColor: "var(--color-mist)", opacity: 0.9 }}
+            style={{
+              backgroundColor: "var(--color-mist)",
+              opacity: 0.9,
+            }}
           >
             <h2
-              className="mb-2 text-lg font-medium"
+              className="mb-1 text-lg font-medium"
               style={{
                 fontFamily: "var(--font-dm-serif)",
                 color: "var(--color-forest-frame)",
               }}
             >
-              Contact
+              Questions &amp; feedback
             </h2>
             <p
-              className="text-sm leading-relaxed"
+              className="mb-6 text-sm leading-relaxed"
               style={{ color: "var(--color-driftwood)" }}
             >
-              Questions not covered here? Reach out at{" "}
-              <a
-                href="mailto:hello@keruapp.com"
-                style={{ color: "var(--color-still-water)" }}
-              >
-                hello@keruapp.com
-              </a>
-              {" "}— we read every message.
+              Not covered above? Got a suggestion or something you&rsquo;d like
+              to share? Send us a message — we read everything.
             </p>
+            <ContactForm />
           </section>
         </article>
       </main>
