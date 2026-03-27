@@ -88,10 +88,10 @@ export default function PrivacyPage() {
                 developed by Fremstilt. If you have questions about this policy,
                 contact us at{" "}
                 <a
-                  href="mailto:privacy@keruapp.com"
+                  href="mailto:hello@keruapp.com"
                   style={{ color: "var(--color-still-water)" }}
                 >
-                  privacy@keruapp.com
+                  hello@keruapp.com
                 </a>
                 .
               </p>
@@ -311,10 +311,10 @@ export default function PrivacyPage() {
               >
                 To exercise any of these rights, contact{" "}
                 <a
-                  href="mailto:privacy@keruapp.com"
+                  href="mailto:hello@keruapp.com"
                   style={{ color: "var(--color-still-water)" }}
                 >
-                  privacy@keruapp.com
+                  hello@keruapp.com
                 </a>
                 .
               </p>
